@@ -1,0 +1,47 @@
+{% extends "frontend/layout.html" %}
+
+{% block body %}
+
+<div class="form-signin w-75 m-auto text-center d-flex justify-content-center">
+    <form action="{% url 'backend:register' %}" method="post">
+        {% csrf_token %}
+
+        <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+        {% if message %}
+        <div class="alert alert-light py-1" role="alert">
+            &#10071;&#10071;
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingUsername" placeholder="Username" name="username">
+            <label for="floatingUsername">Username</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="email">
+            <label for="floatingEmail">Email Address </label>
+        </div>
+
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                autocomplete="off">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingConfirmation" placeholder="Confirm Password"
+                name="confirmation" autocomplete="off">
+            <label for="floatingConfirmation">Confirm Password</label>
+        </div>
+
+        <input class="w-75 btn btn-lg btn-secondary mt-3 mb-1" type="submit" value="Register">
+
+        <div>Already have an account? <a href="{% url 'backend:login' %}">Log In here.</a></div>
+
+    </form>
+
+</div>
+
+
+{% endblock %}

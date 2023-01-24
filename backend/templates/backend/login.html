@@ -1,0 +1,35 @@
+{% extends "frontend/layout.html" %}
+<!-- Variables: message,  -->
+
+{% block body %}
+
+<div class="form-signin w-75 m-auto text-center d-flex justify-content-center">
+    <form action="{% url 'backend:login' %}" method="post" class="">
+        {% csrf_token %}
+
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        {% if message %}
+        <div class="alert alert-light py-1" role="alert">
+            &#10071;&#10071;
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
+            <label for="floatingInput">Username</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                autocomplete="off">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <input class="w-75 btn btn-lg btn-secondary mt-3 mb-1" type="submit" value="Sign in">
+
+        <div> Don't have an account? <a href="{% url 'backend:register' %}">Register here.</a></div>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+.DS_Store
+.env 
+
+# npm
+node_modules/
+
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3

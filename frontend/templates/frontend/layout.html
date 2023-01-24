@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AllstarsRecipes</title>
+    <link rel="icon" href="{% static 'assets/star.png' %}" type="image/icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+</head>
+
+<body>
+
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-around justify-content-sm-between py-2 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <span class="h2" id="brand">All&#127775;Recipes</span>
+        </a>
+
+        {% if user.is_authenticated %}
+        <ul class="nav col-12 col-sm-auto mb-2 justify-content-center mb-md-0 gap-4">
+            <li><a href="/" class="nav-link px-2 link-secondary">Explore</a></li>
+
+            <li><a href="/my-recipes" class="nav-link px-2 link-dark">Recipe Boxes</a></li>
+
+        </ul>
+        {% endif %}
+
+        <div class="col-md-3  text-end">
+            <!-- User logged in -->
+            {% if user.is_authenticated %}
+            <div class="dropdown">
+                <a class="dropdown-toggle link-dark text-decoration-none" href="#" role="button" id="usr"
+                    data-usr="{{user}}" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hello, {{ user.username }}!
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/my-recipes" class="dropdown-item " id="create">My Boxes</a></li>
+                    <li><a href="/my-recipes/new" class="dropdown-item " id="create">Create a Box</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a href="{% url 'backend:logout' %}" class="dropdown-item " id="logout">Log-out</a></li>
+                </ul>
+            </div>
+
+            <!-- NOT signed in -->
+            {% else %}
+            <a href="{% url 'backend:login' %}" class="btn btn-light me-2">Sign in</a>
+            <a href="{% url 'backend:register' %}" class="btn btn-secondary">Get started</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <!-- main page -->
+    {% block body %}
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/logout.js"></script>
+
+    {% block script %}
+    {% endblock %}
+</body>
+
+</html>

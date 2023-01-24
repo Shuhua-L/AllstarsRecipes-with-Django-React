@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital@1&family=Open+Sans&family=Roboto&family=Ubuntu&family=Raleway&family=Roboto+Slab&display=swap");
+
+:root {
+  --font-robotoslab: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-exo2: "Exo 2", sans-serif;
+  --font-opensans: "Open Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
+}
+
+body {
+  padding: 10px;
+  font-family: var(--font-opensans);
+  background-color: #f6f6f5;
+}
+
+a {
+  text-decoration: none;
+  color: #131320;
+}
+
+/* 
+*  Header
+*/
+#brand {
+  font-weight: 600;
+  font-family: var(--font-exo2);
+}
+
+.dropdown-item:hover {
+  background-color: #bbacad;
+}
+
+.btn-secondary {
+  --bs-btn-bg: #946481;
+  --bs-btn-hover-bg: #7a4b68;
+}
+
+.btn-light {
+  /* --bs-btn-bg: #f6f6f5; */
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #7a4b68;
+  --bs-btn-border-width: 1.5px;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #ac879d;
+  --bs-btn-active-bg: #ac879d;
+  --bs-btn-active-border-color: #7a4b68;
+}
+
+/* 
+*  Log in page
+*/
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* 
+*  Home page : recipe card
+*/
+.recipe-card {
+  min-height: 18rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-card:hover {
+  box-shadow: 0px 30px 18px -8px #b3a3a4;
+  transform: scale(1.05, 1.05);
+}
+
+.recipe-card img {
+  filter: brightness(1.08) contrast(0.95) saturate(1.15);
+
+  border-radius: 1.5rem;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-card .gradient {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.recipe-card p {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
+  color: white;
+  width: 90%;
+  height: 10%;
+  margin-bottom: 13%;
+  font-family: var(--font-ubuntu);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-card .form-check-input {
+  margin: revert;
+  min-width: 16px;
+}
+
+/* 
+*  Home page : search
+*/
+
+.search {
+  width: 50%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  background: #edeae5;
+  -webkit-box-shadow: 5px 5px 7px #b3a3a4, -5px -5px 7px #b3a3a4;
+  box-shadow: 5px 5px 7px #b3a3a4, -5px -5px 7px #b3a3a4;
+}
+
+.search input[type="text"] {
+  flex: 1;
+  border: none;
+  font-size: 1.1rem;
+  font-family: var(--font-raleway);
+  font-weight: 400;
+  padding-right: 1rem;
+
+  outline: none;
+  /* color: #0b0806; */
+  color: #131320;
+  background: #edeae5;
+}
+
+.search input[type="image"] {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .search {
+    padding: 1rem 1.75rem;
+    width: 85%;
+  }
+
+  .search input[type="text"] {
+    font-size: 1rem;
+  }
+
+  .search input[type="image"] {
+    width: 25px;
+    height: 25spx;
+  }
+}
+
+/* 
+*  Home page : back to top
+*/
+.backToTop {
+  position: fixed;
+  cursor: pointer;
+  bottom: 3%;
+  left: 95%;
+
+  background: #edeae5;
+  box-shadow: 2px 2px 7px #b3a3a4, -2px -2px 7px #b3a3a4;
+
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 10px;
+}
+.backToTop:hover {
+  transform: scale(1.5);
+}
+
+/* 
+*  Recipe page 
+*/
+.recipe-wrapper h2 {
+  margin-bottom: 2rem;
+}
+
+.recipe-wrapper img {
+  max-width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.d-grid {
+  align-content: center;
+}
+
+.d-grid .btn {
+  height: 32px;
+}
+
+.d-grid .dropdown-menu {
+  --bs-dropdown-min-width: 0;
+  --bs-dropdown-padding-y: 0;
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-color: #ac879d;
+  border-width: 2px;
+  /* --bs-nav-tabs-border-width: 2px; */
+}
+
+.nav-tabs .nav-link {
+  color: #212529;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: #ac879d;
+  border-color: #7a4b68;
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link:hover {
+  --bs-nav-tabs-link-hover-border-color: none;
+}
+
+/* 
+*  RecipeBox page
+*/
+.content {
+  padding: 10px;
+}
+
+.sidebar {
+  background-color: #edeae5;
+  height: 100vh;
+  /* height: auto; */
+  padding: 20px;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.btn-toggle {
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: transparent;
+  width: 100%;
+}
+
+.btn-toggle span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 3px;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #bbacad;
+}
+
+.box-title::before {
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(0, 0, 0, 0.85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav li {
+  padding: 0.1875rem 0.5rem;
+  margin-top: 0.125rem;
+  margin-left: 1.25rem;
+}
+.btn-toggle-nav li:hover,
+.btn-toggle-nav li:focus {
+  background-color: #bbacad;
+}
+
+.input-box-info {
+  background-color: transparent;
+  outline: auto;
+  padding: 5px 10px;
+}
+
+.btn-close {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* .scrollarea {
+  overflow-y: auto;
+} */
+
+/* @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar li {
+    float: left;
+  }
+  .content {
+    margin-left: 0;
+  }
+} */
