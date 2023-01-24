@@ -1,5 +1,10 @@
 .DS_Store
 .env 
+.env/
+.venv/
+env/
+venv/
+*.env
 
 # npm
 node_modules/
@@ -9,3 +14,6 @@ node_modules/
 
 # Database
 *.sqlite3
+
+*.pyc
+staticfiles/

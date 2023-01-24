@@ -18,11 +18,9 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = ['allstarsrecipes.up.railway.app', '127.0.0.1']
-# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
+ALLOWED_HOSTS = ['allstarsrecipes.up.railway.app', '.railway.com', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://allstarsrecipes.up.railway.app']
-# CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://allstarsrecipes.up.railway.app', 'https://*.railway.app']
 
 # Application definition
 
