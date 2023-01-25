@@ -1,1 +1,1 @@
-web: python3 manage.py collectstatic && python3 manage.py migrate && gunicorn capstone.wsgi
+web: python3 manage.py migrate && gunicorn capstone.wsgi
