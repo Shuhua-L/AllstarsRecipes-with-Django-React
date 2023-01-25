@@ -15,5 +15,3 @@ node_modules/
 # Database
 *.sqlite3
 
-*.pyc
-staticfiles/
