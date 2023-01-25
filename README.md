@@ -1,6 +1,6 @@
 # All:star2:Recipes
 
-This is my final project for CS50's Web Programming with Python and JavaScript.
+This is my capstone project for CS50's Web Programming with Python and JavaScript course. I have designed and developed a full-stack recipe web application named AllstarsRecipes, which allows users to explore and search for their desired recipes, and create collections to save them for later use.
 
 **:computer: View Course [here](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)**
 
