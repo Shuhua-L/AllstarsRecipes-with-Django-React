@@ -134,8 +134,9 @@ Detailed recipes are acquired by accessing the [Spoonacular API](https://spoonac
   - `urls.py`: contains all the frontend paths managed by React
   - `views.py`: contains all the functions to render HTMLs and authenticate users
 
-- `./screenshots/` : all the screenshots to illustrate the features of the application
 - `manage.py`: a command-line utility to run commands like `runserver`, `makemigrations`, and `migrate`
+- `./screenshots/` : all the screenshots to illustrate the features of the application
+- `Procfile` & `runtime.txt` & `staticfiles/`: files required for deploying the app on Railway
 
 &nbsp;
 
@@ -146,3 +147,4 @@ Detailed recipes are acquired by accessing the [Spoonacular API](https://spoonac
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Font Awesome](https://fontawesome.com)
 - [Google Font](https://fonts.google.com/)
+- [Railway](https://railway.app/)
